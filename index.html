@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Princess 🎂</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lottie Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Baloo 2', cursive;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7, #a1c4fd, #c2e9fb);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #fff;
+      border-radius: 50%;
+      animation: fall 6s linear infinite;
+    }
+    @keyframes fall {
+      from { transform: translateY(-10px); opacity: 1; }
+      to { transform: translateY(100vh); opacity: 0; }
+    }
+    @keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+/* Floating balloons */
+.balloon {
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, #ff99cc, #ff3366);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: rise 12s linear infinite;
+  opacity: 0.7;
+}
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: #444;
+}
+@keyframes rise {
+  0% { transform: translateY(100vh) scale(1); opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-120vh) scale(1.1); opacity: 0; }
+}
+
+/* Pulsing glowing hearts */
+.heart {
+  position: absolute;
+  color: #ff4d88;
+  font-size: 20px;
+  animation: heartbeat 2s infinite ease-in-out;
+  opacity: 0.7;
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
+
+/* Twinkling stars */
+.star {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+/* Falling Confetti */
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  opacity: 0.9;
+  animation: fallConfetti linear infinite;
+}
+@keyframes fallConfetti {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-center relative overflow-x-hidden">
+  <!-- Animated Balloons -->
+<div class="balloon" style="left: 10%; animation-delay: 0s;"></div>
+<div class="balloon" style="left: 30%; animation-delay: 3s;"></div>
+<div class="balloon" style="left: 70%; animation-delay: 6s;"></div>
+<div class="balloon" style="left: 90%; animation-delay: 1s;"></div>
+
+<!-- Floating Hearts -->
+<div class="heart" style="top: 20%; left: 15%; animation-delay: 0s;">💖</div>
+<div class="heart" style="top: 50%; left: 75%; animation-delay: 1s;">💕</div>
+<div class="heart" style="top: 70%; left: 40%; animation-delay: 2s;">💞</div>
+
+<!-- Twinkling Stars -->
+<div class="star" style="top: 15%; left: 25%; animation-delay: 0s;"></div>
+<div class="star" style="top: 30%; left: 60%; animation-delay: 1s;"></div>
+<div class="star" style="top: 55%; left: 80%; animation-delay: 2s;"></div>
+<div class="star" style="top: 70%; left: 20%; animation-delay: 3s;"></div>
+<div class="star" style="top: 10%; left: 30%; animation-delay: 0s;"></div>
+<div class="star" style="top: 40%; left: 50%; animation-delay: 1s;"></div>
+<div class="star" style="top: 50%; left: 70%; animation-delay: 2s;"></div>
+<div class="star" style="top: 60%; left: 30%; animation-delay: 3s;"></div>
+
+<!-- Falling Confetti -->
+<div class="confetti" style="left: 5%; background:#FF5733; animation-duration: 6s; animation-delay: 0s;"></div>
+<div class="confetti" style="left: 15%; background:#FFC300; animation-duration: 7s; animation-delay: 1s;"></div>
+<div class="confetti" style="left: 25%; background:#DAF7A6; animation-duration: 8s; animation-delay: 2s;"></div>
+<div class="confetti" style="left: 40%; background:#FF33FF; animation-duration: 6s; animation-delay: 1s;"></div>
+<div class="confetti" style="left: 55%; background:#33FFF6; animation-duration: 7s; animation-delay: 3s;"></div>
+<div class="confetti" style="left: 70%; background:#FFBD33; animation-duration: 5s; animation-delay: 2s;"></div>
+<div class="confetti" style="left: 85%; background:#75FF33; animation-duration: 9s; animation-delay: 0s;"></div>
+<div class="confetti" style="left: 95%; background:#FF6F61; animation-duration: 8s; animation-delay: 4s;"></div>
+
+
+  <!-- Floating Confetti -->
+  <div class="confetti" style="left: 20%; animation-delay: 0s;"></div>
+  <div class="confetti" style="left: 50%; animation-delay: 2s;"></div>
+  <div class="confetti" style="left: 80%; animation-delay: 4s;"></div>
+
+  <!-- Header -->
+  <header class="mt-20">
+    <h1 class="text-4xl sm:text-5xl font-bold text-white drop-shadow-lg animate-bounce font-[Pacifico]">
+      🎉 Happy Birthday, Princess! 🎂
+    </h1>
+    <p class="mt-3 text-lg text-white italic">"🌟Like starlight, may your happiness never fade.✨"</p>
+    <!-- <p class="mt-3 text-lg text-white italic">"To the brightest star in my life 💖"</p> -->
+  </header>
+
+
+  <!-- Blessing Card -->
+<section class="relative mt-8 max-w-sm p-1 rounded-3xl bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 shadow-xl animate-pulse-slow">
+  <div class="bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-lg">
+    <!-- Floating stars -->
+    <span class="absolute -top-3 -left-3 text-yellow-300 text-2xl animate-bounce">✨</span>
+    <span class="absolute -top-3 -right-3 text-pink-300 text-xl animate-bounce delay-200">💫</span>
+    <span class="absolute -bottom-3 right-6 text-purple-300 text-lg animate-bounce delay-500">🌟</span>
+
+    <p class="text-gray-700 text-lg leading-relaxed font-[Baloo 2]">
+      Dear Sister, <br><br>
+      On this special day, I wish you a world full of dreams, laughter, and endless joy.  
+      May your smile shine brighter than the stars, and may your heart always be as pure as today.  
+      Keep blooming, keep dreaming. 💖🎂🌈
+    </p>
+  </div>
+</section>
+
+
+  <!-- Birthday Animations -->
+  <section class="mt-8 flex flex-col items-center space-y-6">
+    <!-- Cake Animation -->
+    <div id="cake" class="w-40 h-40"></div>
+    <!-- Balloons Animation -->
+    <div id="balloons" class="w-40 h-40 float"></div>
+    <!-- Gift Animation -->
+    <!-- <div id="gift" class="w-40 h-40"></div> -->
+  </section>
+
+  <!-- Decorative Floral Divider -->
+<div class="flex justify-center mb-4">
+  <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40" fill="none">
+    <path d="M10 20 Q 20 5, 30 20 T 50 20 T 70 20 T 90 20 T 110 20" stroke="#ff66a3" stroke-width="3" fill="transparent" stroke-linecap="round"/>
+    <circle cx="10" cy="20" r="4" fill="#ff99cc"/>
+    <circle cx="30" cy="20" r="4" fill="#ffccff"/>
+    <circle cx="50" cy="20" r="4" fill="#ff99cc"/>
+    <circle cx="70" cy="20" r="4" fill="#ffccff"/>
+    <circle cx="90" cy="20" r="4" fill="#ff99cc"/>
+    <circle cx="110" cy="20" r="4" fill="#ffccff"/>
+  </svg>
+</div>
+
+
+  <!-- Quote -->
+  <section class="mt-10 px-6">
+    <p class="text-xl font-semibold text-white italic">
+      "Sisters are different flowers from the same garden 🌸"
+    </p>
+  </section>
+
+  <!-- Quote -->
+<section class="mt-10 px-6">
+  <!-- Floral Divider -->
+  <div class="flex justify-center mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40" fill="none">
+      <path d="M10 20 Q 20 5, 30 20 T 50 20 T 70 20 T 90 20 T 110 20" stroke="#ff66a3" stroke-width="3" fill="transparent" stroke-linecap="round"/>
+      <circle cx="10" cy="20" r="4" fill="#ff99cc"/>
+      <circle cx="30" cy="20" r="4" fill="#ffccff"/>
+      <circle cx="50" cy="20" r="4" fill="#ff99cc"/>
+      <circle cx="70" cy="20" r="4" fill="#ffccff"/>
+      <circle cx="90" cy="20" r="4" fill="#ff99cc"/>
+      <circle cx="110" cy="20" r="4" fill="#ffccff"/>
+    </svg>
+  </div>
+
+  <!-- Quote
+  <p class="text-xl font-semibold text-white italic">
+    "Sisters are different flowers from the same garden 🌸"
+  </p>
+</section> -->
+
+
+  <!-- Footer -->
+  <footer class="mt-12 mb-6 text-white text-sm">
+    <p>Made with 💖 by your biggest fan </p>
+    <!-- <a href="https://wa.me/91XXXXXXXXXX?text=Happy%20Birthday%20Princess!%20🎂🎉" 
+       target="_blank" 
+       class="mt-4 inline-block bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-full shadow-lg">
+       🎁 Send Your Wishes Too!
+    </a> -->
+  </footer>
+
+  <!-- Lottie Animations Script -->
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('cake'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets7.lottiefiles.com/packages/lf20_q5pk6p1k.json'
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('balloons'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets1.lottiefiles.com/private_files/lf30_tam5mf4q.json'
+    });
+
+    // lottie.loadAnimation({
+    //   container: document.getElementById('gift'),
+    //   renderer: 'svg',
+    //   loop: true,
+    //   autoplay: true,
+    //   path: 'https://assets1.lottiefiles.com/packages/lf20_jcikwtux.json'
+    // });
+  </script>
+</body>
+</html>
